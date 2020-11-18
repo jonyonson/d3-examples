@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="chart"></div>
+  <!-- <p>Credit: <a href="https://observablehq.com/@jonyonson/zoom-to-bounding-box">Zoom to Bounding Box by Jonathan Taylor</a></p> -->
+
+  <script type="module">
+  import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+  import define from "https://api.observablehq.com/@jonyonson/zoom-to-bounding-box.js?v=3";
+  (new Runtime).module(define, name => {
+    if (name === "chart") return Inspector.into(".chart")();
+  });
+</script>
+</body>
+</html>
