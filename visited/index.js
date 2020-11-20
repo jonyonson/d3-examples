@@ -108,6 +108,7 @@ d3.csv('data/states-lived.csv', function (data) {
         }
       })
       .on('click', function (d) {
+        console.log(d);
         console.log(d.properties.name);
       });
 

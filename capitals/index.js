@@ -85,6 +85,7 @@ d3.json('data/us-states.json', (json) => {
     return cityName.replace(/ /g, '-');
   }
 
+  console.log(json.features);
   // Bind the data to the SVG and create one path per GeoJSON feature
   svg
     .selectAll('path')
